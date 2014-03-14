@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
   def index
+    # session.clear
     @all_questions = Question.all
     if session[:id]
       @my_questions = Question.where(user_id: view_context.current_user.id)
