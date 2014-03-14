@@ -3,7 +3,9 @@ RabbitOverflow::Application.routes.draw do
 
   resources :users
   resources :questions, except: [:edit, :update, :destroy]
-  resources :answers, only: [:create]
-  resources :votes
+  resources :answers, only: [:create] do
+    post :upvote
+    post :downvote
+  end
   resources :sessions, only: [:new, :create, :destroy]
 end
