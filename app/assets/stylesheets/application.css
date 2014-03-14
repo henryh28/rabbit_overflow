@@ -33,13 +33,19 @@ nav input {
 .answer {
   display: inline-block;
   border: 1px solid purple;
-  width: 500px;
+  width: 450px;
 }
 
 .votes {
   border: 1px solid red;
   display: inline-block;
   width: 60px;
+}
+
+.author {
+  width: 150px;
+  display: inline-block;
+  border: 1px solid blue;
 }
 
 .notice {
