@@ -20,3 +20,28 @@ nav input {
   float: right;
   display: inline;
 }
+
+.my_questions{
+  border: 1px solid blue;
+}
+
+.all_questions {
+  border: 1px solid purple;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.answer {
+  display: inline-block;
+  border: 1px solid purple;
+  width: 500px;
+}
+
+.votes {
+  border: 1px solid red;
+  display: inline-block;
+  width: 60px;
+}

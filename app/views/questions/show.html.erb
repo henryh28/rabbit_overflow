@@ -1,0 +1,21 @@
+<div class="show_single_question">
+  <a class="title"><%= @question.title %></a><br>
+  <a class="content">Content: <%= @question.content %></a>
+</div>
+
+<div class="submit_answer">
+  <h3>Submit answer</h3>
+  <%= form_for :answer, url: answers_path do |answer| %>
+    <%= answer.label :content %>
+    <%= answer.text_area :content, size: "50x15" %><br>
+    <%= answer.hidden_field( :question_id, :value => @question.id) %>
+    <%= answer.submit "Submit answer" %>
+  <% end %>
+</div>
+<br>
+<div class="all_answers">
+  <% @answers.each do |answer| %>
+     <div class="votes">Votes: </div>
+     <div class="answer"><%= answer.content %></div><br>
+  <% end %>
+</div>
