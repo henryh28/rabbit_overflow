@@ -12,8 +12,8 @@
     <% if current_user %>
       <%= button_to "Log out", user_logout_path %>
     <% else %>
-      <%= button_to "Sign-up", new_user_path %>
-      <%= button_to "Login", user_login_path(user_id: 0) %>
+      <%= button_to "Sign-up", new_user_path, method: :get %>
+      <%= button_to "Login", user_login_path(user_id: 0), method: :get %>
     <% end %>
   </nav>
     <%= yield %>

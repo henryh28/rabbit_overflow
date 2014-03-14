@@ -1,7 +1,11 @@
-class UserControllers < ApplicationController
-
+class UsersController < ApplicationController
   def new
-    redirect_to root_pathg
+
+  end
+
+  def create
+    User.create(params[:new_user])
+    redirect_to root_path
   end
 
   def login
