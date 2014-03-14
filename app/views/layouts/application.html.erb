@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RabbitOverflow</title>
+  <title>Rabbit Overflow</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="nav">
+  <nav>
+    <% if current_user %>
+      <%= button_to "Log out", user_logout_path %>
+    <% else %>
+      <%= button_to "Sign-up", new_user_path %>
+      <%= button_to "Login", user_login_path(user_id: 0) %>
+    <% end %>
+  </nav>
+    <%= yield %>
+  </div>
 </body>
 </html>
