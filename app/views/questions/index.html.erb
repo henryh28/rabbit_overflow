@@ -1,19 +1,29 @@
 <% if current_user %>
+
   logged in as: <%= current_user.username %>
   <%= button_to "Post new question", new_question_path, method: :get %>
   <br>
-  <div class="my_questions">
-    <% if @my_questions %>
-      <% @my_questions.each do |question| %>
-        <li><%= question.title %></li>
+  <fieldset>
+  <legend>My Questions</legend>
+    <div class="my_questions">
+      <% if @my_questions %>
+        <% @my_questions.each do |question| %>
+          <%= link_to question.title, question_path(id: question.id) %><br>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  </fieldset>
+
 <% end %>
+
 <br>
-<div class="all_questions">
+
+<fieldset>
+  <legend>All Questions</legend>
+  <div class="all_questions">
   <% @all_questions.each do |question| %>
     <%= link_to question.title, question_path(id: question.id) %><br>
   <% end %>
-</div>
+  </div>
+</fieldset>
 

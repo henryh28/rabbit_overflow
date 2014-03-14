@@ -3,7 +3,7 @@ class AnswersController < ApplicationController
     question = params[:answer][:question_id]
     new_answer = Answer.new(params[:answer])
     if new_answer.save
-      redirect_to root_path
+      redirect_to question_path(params[:answer][:question_id])
     else
       render :new
     end

@@ -22,16 +22,12 @@ nav input {
 }
 
 .my_questions{
-  border: 1px solid blue;
 }
 
-.all_questions {
-  border: 1px solid purple;
-}
 
 .title {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .answer {
@@ -44,4 +40,11 @@ nav input {
   border: 1px solid red;
   display: inline-block;
   width: 60px;
+}
+
+.notice {
+  margin-top: 50px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
 }
