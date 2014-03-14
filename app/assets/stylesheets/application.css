@@ -11,3 +11,12 @@
  *= require_self
  *= require_tree .
  */
+
+nav {
+}
+
+
+nav input {
+  float: right;
+  display: inline;
+}

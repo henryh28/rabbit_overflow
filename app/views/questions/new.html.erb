@@ -1,0 +1,17 @@
+<header><h1>Post New Question</h1></header>
+<%= form_for :new_question, url: questions_path, method: :post do |question| %>
+  <table>
+    <tr>
+      <th>Title</th>
+      <td><%= question.text_field(:title, size: "65") %></td>
+    </tr>
+    <tr>
+      <th>Content</th>
+      <td><%= question.text_area(:content, size: "50x15") %></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><%= question.submit "Post Question" %></td>
+    </tr>
+  </table>
+<% end %>

@@ -1,6 +1,10 @@
 <% if current_user %>
-  logged in
+  logged in, show form for creating questions
+  <%= button_to "Post new question", new_question_path, method: :get %>
+
+
 <% else %>
-  not logged in
+  not logged in, display all questions
 <% end %>
+
 

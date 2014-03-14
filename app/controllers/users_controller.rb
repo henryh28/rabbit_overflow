@@ -3,8 +3,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(params[:new_user])
-    redirect_to root_path
+    new_user = User.new(params[:new_user])
+    if new_user.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
 end
