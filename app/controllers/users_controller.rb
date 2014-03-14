@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def new
-
   end
 
   def create
@@ -8,12 +7,4 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def login
-
-  end
-
-  def logout
-    session.clear
-    redirect_to root_path
-  end
 end
