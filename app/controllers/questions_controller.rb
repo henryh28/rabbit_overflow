@@ -26,4 +26,18 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def upvote
+    question = Question.find(params[:question_id])
+    count = question.votes + 1
+    question.update_attributes(votes: count)
+    redirect_to question_path(params[:question_id])
+  end
+
+  def downvote
+    question = Question.find(params[:question_id])
+    count = question.votes - 1
+    question.update_attributes(votes: count)
+    redirect_to question_path(params[:question_id])
+  end
+
 end

@@ -25,9 +25,11 @@ ActiveRecord::Schema.define(:version => 20140314035744) do
   create_table "questions", :force => true do |t|
     t.string   "title"
     t.text     "content"
+    t.integer  "best_answer_id"
+    t.integer  "votes",          :default => 0
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "sessions", :force => true do |t|

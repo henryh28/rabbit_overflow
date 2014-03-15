@@ -31,21 +31,26 @@ nav input {
 }
 
 .answer {
+  margin-top: 15px;
   display: inline-block;
-  border: 1px solid purple;
-  width: 450px;
+  border: 1px solid silver;
+  width: 600px;
+}
+
+.single_question {
+  display: inline-block;
 }
 
 .votes {
-  border: 1px solid red;
+  text-align: center;
   display: inline-block;
-  width: 60px;
+  width: 50px;
 }
 
 .author {
-  width: 150px;
+  background-color: silver;
+  margin-left: 300px;
   display: inline-block;
-  border: 1px solid blue;
 }
 
 .notice {
@@ -53,4 +58,8 @@ nav input {
   text-align: center;
   color: red;
   font-weight: bold;
+}
+
+fieldset {
+  margin-top: 5px;
 }
