@@ -13,3 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function(){
+  $("a.submit_answer_toggle").click(function(){
+    $('.submit_answer').slideToggle();
+    return false;
+  })
+})
+
+$(function(){
+  $("a.answers_toggle").click(function(){
+    $('.all_answers').slideToggle();
+    return false;
+  })
+})

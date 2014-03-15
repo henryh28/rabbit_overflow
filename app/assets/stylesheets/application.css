@@ -37,6 +37,28 @@ nav input {
   width: 600px;
 }
 
+/*===== toggle effects =====*/
+a.submit_answer_toggle {
+  text-decoration: none;
+  color: #FF9900;
+}
+
+a.answers_toggle {
+  text-decoration: none;
+  color: #FF9900;
+}
+
+.submit_answer {
+  display: none;
+}
+
+.all_answers {
+  display: none;
+}
+
+/*==========================*/
+
+
 .single_question {
   display: inline-block;
 }

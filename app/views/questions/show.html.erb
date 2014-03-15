@@ -14,7 +14,7 @@
 <br>
 <% if current_user %>
   <fieldset>
-    <legend><h3>Submit Answer</h3></legend>
+    <legend><h3><a href="#" class="submit_answer_toggle">Submit Answer</a></h3></legend>
     <div class="submit_answer">
       <%= form_for :answer, url: answers_path do |answer| %>
         <%= answer.text_area :content, size: "50x10" %><br>
@@ -25,17 +25,19 @@
   </fieldset>
 <% end %>
 <br>
-<div class="all_answers">
   <fieldset>
-  <legend>Answers</legend>
-  <% @answers.each do |answer| %>
-     <div class="votes">
-       <%= button_to "▲", answer_upvote_path(answer.id) if current_user %>
-       <%= answer.votes %><%= button_to "▼", answer_downvote_path(answer.id) if current_user %>
-     </div>
-     <div class="answer"><%= simple_format answer.content %><br><span class="author">Answered: <%= answer.created_at.strftime("%b %e, %Y at %r") %> by <%= answer.author %></span></div>
-     <br>
-  <% end %>
+    <legend><h3><a href="#" class="answers_toggle">Answers</a></h3></legend>
+    <div class="all_answers">
+
+    <% @answers.each do |answer| %>
+       <div class="votes">
+         <%= button_to "▲", answer_upvote_path(answer.id) if current_user %>
+         <%= answer.votes %><%= button_to "▼", answer_downvote_path(answer.id) if current_user %>
+       </div>
+       <div class="answer"><%= simple_format answer.content %><br><span class="author">Answered: <%= answer.created_at.strftime("%b %e, %Y at %r") %> by <%= answer.author %></span></div>
+       <br>
+    <% end %>
   </fieldset>
+
 </div>
 
