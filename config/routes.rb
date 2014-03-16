@@ -1,14 +1,17 @@
 RabbitOverflow::Application.routes.draw do
   root to: 'questions#index'
 
-  resources :users
+  resources :users do
+    resources :votes, only: [:create, :destroy]
+  end
+
   resources :questions, except: [:edit, :update, :destroy] do
-    post :upvote
-    post :downvote
+    resources :votes, only: [:create, :destroy]
   end
+
   resources :answers, only: [:create] do
-    post :upvote
-    post :downvote
+    resources :votes, only: [:create, :destroy]
   end
+
   resources :sessions, only: [:new, :create, :destroy]
 end

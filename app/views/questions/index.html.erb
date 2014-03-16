@@ -1,6 +1,4 @@
 <% if current_user %>
-
-  logged in as: <%= current_user.username %>
   <%= button_to "Post new question", new_question_path, method: :get %>
   <br>
   <fieldset>

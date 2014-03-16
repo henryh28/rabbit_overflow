@@ -1,9 +1,10 @@
 <div class="question_box">
   <fieldset>
     <legend>Question</legend>
+    <% session[:question_id] = @question.id %>
     <div class="votes">
-      <%= button_to "▲", question_upvote_path(@question.id) if  current_user %>
-      <%= @question.votes %><%= button_to "▼", question_downvote_path( @question.id) if current_user %>
+      <%= button_to "▲", question_votes_path(@question.id) if  current_user %>
+      <%= @question.total_votes %><%= button_to "▼", question_vote_path( @question.id), :method => :delete if current_user %>
     </div>
     <div class="single_question">
       <a class="title"><%= @question.title %></a><br>
@@ -31,8 +32,8 @@
 
     <% @answers.each do |answer| %>
        <div class="votes">
-         <%= button_to "▲", answer_upvote_path(answer.id) if current_user %>
-         <%= answer.votes %><%= button_to "▼", answer_downvote_path(answer.id) if current_user %>
+         <%= button_to "▲", answer_votes_path(answer.id) if current_user %>
+         <%= answer.total_votes %><%= button_to "▼", answer_vote_path(answer.id), :method => :delete if current_user %>
        </div>
        <div class="answer"><%= simple_format answer.content %><br><span class="author">Answered: <%= answer.created_at.strftime("%b %e, %Y at %r") %> by <%= answer.author %></span></div>
        <br>

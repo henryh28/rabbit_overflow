@@ -13,6 +13,7 @@
  */
 
 nav {
+  border: 1px solid red;
 }
 
 
@@ -49,10 +50,6 @@ a.answers_toggle {
 }
 
 .submit_answer {
-  display: none;
-}
-
-.all_answers {
   display: none;
 }
 

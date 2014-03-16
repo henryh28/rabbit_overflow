@@ -1,9 +1,8 @@
 class CreateAnswers < ActiveRecord::Migration
   def change
     create_table :answers do |t|
-      t.text :content
+      t.text :content, null: false
       t.string :author, :default => "Guest"
-      t.integer :votes, :default => 0
       t.belongs_to :question
       t.timestamps
     end

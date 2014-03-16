@@ -23,5 +23,4 @@ class AnswersController < ApplicationController
     answer.update_attributes(votes: count)
     redirect_to question_path(answer.question_id)
   end
-
 end
