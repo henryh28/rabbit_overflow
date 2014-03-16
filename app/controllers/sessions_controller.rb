@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by_username(params[:login][:username])
-    if user && params[:login][:password] == user.password
+    if user && user.authenticate(params[:login][:password])
       session[:id] = user.id
       redirect_to root_path
-    elsif user && params[:login][:password] != user.password
+    elsif user && !user.authenticate(params[:login][:password])
       flash.now[:error] = "Invalid password"
       render :new
     else
