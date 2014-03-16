@@ -12,41 +12,36 @@
  *= require_tree .
  */
 
-nav {
-  border: 1px solid red;
+
+ul {
+  list-style: none;
 }
 
+li {
+  float: right;
+}
 
-nav input {
+/*nav input {
   float: right;
   display: inline;
 }
-
-.my_questions{
-}
-
+*/
 
 .title {
   font-weight: bold;
   font-size: 25px;
 }
 
-.answer {
-  margin-top: 15px;
-  display: inline-block;
-  border: 1px solid silver;
-  width: 600px;
-}
 
 /*===== toggle effects =====*/
 a.submit_answer_toggle {
   text-decoration: none;
-  color: #FF9900;
+  color: #A375FF;
 }
 
 a.answers_toggle {
   text-decoration: none;
-  color: #FF9900;
+  color: #A375FF;
 }
 
 .submit_answer {
@@ -57,13 +52,28 @@ a.answers_toggle {
 
 
 .single_question {
+  margin-top: 15px;
   display: inline-block;
+  border: 1px solid silver;
+  width: 600px;
 }
 
 .votes {
   text-align: center;
   display: inline-block;
   width: 50px;
+  vertical-align: top;
+}
+
+.answer {
+  margin-top: 15px;
+  display: inline-block;
+  border: 1px solid silver;
+  width: 600px;
+}
+
+.best {
+  width: 25px;
 }
 
 .author {
@@ -81,4 +91,25 @@ a.answers_toggle {
 
 fieldset {
   margin-top: 5px;
+  font-weight: bold;
 }
+
+a {
+  text-decoration: none;
+  color: #A375FF;
+}
+
+a:hover {
+  color: #7258A3;
+}
+
+.logged_in {
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+input {
+  font-weight: bold;
+  box-shadow: 3px 3px 5px #6C6CDA;
+}
+

@@ -22,12 +22,13 @@ ActiveRecord::Schema.define(:version => 20140315203112) do
   end
 
   create_table "questions", :force => true do |t|
-    t.string   "title",          :null => false
-    t.text     "content",        :null => false
+    t.string   "title",                                      :null => false
+    t.text     "content",                                    :null => false
+    t.string   "author",         :default => "Stop hacking"
     t.integer  "best_answer_id"
     t.integer  "user_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
   end
 
   create_table "sessions", :force => true do |t|

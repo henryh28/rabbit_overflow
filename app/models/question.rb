@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :title, :content, :best_answer_id, :user_id, :votes
+  attr_accessible :title, :content, :best_answer_id, :author, :user_id, :votes
 
 
   has_many :votes, :as => :voteable

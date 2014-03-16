@@ -7,6 +7,7 @@ RabbitOverflow::Application.routes.draw do
 
   resources :questions, except: [:edit, :update, :destroy] do
     resources :votes, only: [:create, :destroy]
+    post :best
   end
 
   resources :answers, only: [:create] do
