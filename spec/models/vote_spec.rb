@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Vote do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "association" do
+    it { should belong_to :user }
+  end
+
 end
