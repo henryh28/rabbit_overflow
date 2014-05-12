@@ -1,0 +1,27 @@
+<% if current_user %>
+  <%= button_to "Post new question", new_question_path, method: :get %>
+  <br>
+  <fieldset>
+  <legend>My Questions</legend>
+    <div class="my_questions">
+      <% if @my_questions %>
+        <% @my_questions.each do |question| %>
+          <%= link_to question.title, question_path(id: question.id) %><br>
+        <% end %>
+      <% end %>
+    </div>
+  </fieldset>
+
+<% end %>
+
+<br>
+
+<fieldset>
+  <legend>All Questions</legend>
+  <div class="all_questions">
+  <% @all_questions.each do |question| %>
+    <%= link_to question.title, question_path(id: question.id) %><br>
+  <% end %>
+  </div>
+</fieldset>
+

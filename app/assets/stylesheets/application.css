@@ -1,0 +1,115 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+
+ul {
+  list-style: none;
+}
+
+li {
+  float: right;
+}
+
+/*nav input {
+  float: right;
+  display: inline;
+}
+*/
+
+.title {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+/*===== toggle effects =====*/
+a.submit_answer_toggle {
+  text-decoration: none;
+  color: #A375FF;
+}
+
+a.answers_toggle {
+  text-decoration: none;
+  color: #A375FF;
+}
+
+.submit_answer {
+  display: none;
+}
+
+/*==========================*/
+
+
+.single_question {
+  margin-top: 15px;
+  display: inline-block;
+  border: 1px solid silver;
+  width: 600px;
+}
+
+.votes {
+  text-align: center;
+  display: inline-block;
+  width: 50px;
+  vertical-align: top;
+}
+
+.answer {
+  margin-top: 15px;
+  display: inline-block;
+  border: 1px solid silver;
+  width: 600px;
+}
+
+.best {
+  width: 25px;
+}
+
+.author {
+  background-color: silver;
+  margin-left: 300px;
+  display: inline-block;
+}
+
+.notice {
+  margin-top: 50px;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+fieldset {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #A375FF;
+}
+
+a:hover {
+  color: #7258A3;
+}
+
+.logged_in {
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+input {
+  font-weight: bold;
+  box-shadow: 3px 3px 5px #6C6CDA;
+}
+

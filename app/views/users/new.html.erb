@@ -1,0 +1,23 @@
+<header><h1>New User Signup</h1></header>
+
+<%= form_for(:new_user, url: {action: 'create'}) do |user| %>
+  <table summary="New User signup">
+    <tr>
+      <th>Username</th>
+      <td><%= user.text_field(:username) %></td>
+    </tr>
+    <tr>
+      <th>Password</th>
+      <td><%= user.password_field(:password) %></td>
+    </tr>
+  </table>
+  <div class="form-buttons">
+    <%= submit_tag("Create Account") %>
+  </div>
+<% end %>
+
+<% if flash[:error] %>
+  <div class="notice">
+  <%= flash[:error] %>
+  </div>
+<% end %>
